@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const getUserName = () => {
     console.log('May I have your name?');
     return readlineSync.question('Your answer: ');
-}
+};
 
 const welcomeUser = () => {
     console.log('Welcome to the Brain Games!');
@@ -26,7 +26,7 @@ export const helloUser = () => {
     console.log(`Hello, ${name}!`);
 };
 
-export const isEven = (number) => number % 2 === 0;
+export const isEven = number => number % 2 === 0;
 
 export const playEvenGame = (conditionFunction, questionText) => {
     welcomeUser();
@@ -43,7 +43,8 @@ export const playEvenGame = (conditionFunction, questionText) => {
 
         if (userAnswer.toLowerCase() === correctAnswer) {
             console.log('Correct!');
-        } else {
+        }
+        else {
             console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
             console.log(`Let's try again, ${name}!`);
             return;
